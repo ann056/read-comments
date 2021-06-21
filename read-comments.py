@@ -5,6 +5,9 @@ with open('reviews.txt', 'r') as reviews:
 		data.append(line)
 		count += 1
 		if count % 1000 == 0:
-			print(data)
-print(len(data))
-print(data[3])
+			print(len(data))
+# 計算平均留言字數
+sum_len = 0
+for c in data:
+	sum_len += len(c)
+print('平均留言字數為', sum_len/len(data))
